@@ -15,7 +15,7 @@ The TensorRT execution provider for ONNX Runtime is built and tested with Tensor
 Ort::Env env = Ort::Env{ORT_LOGGING_LEVEL_ERROR, "Default"};
 Ort::SessionOptions sf;
 int device_id = 0;
-Ort::ThrowOnError(OrtSessionOptionsAppendExecutionProvider_Tensorrt(sf, device_id));
+Ort::ThrowOnError(OrtSessionOptionsAppendExecutionProvider_TensorRT(sf, device_id));
 Ort::ThrowOnError(OrtSessionOptionsAppendExecutionProvider_CUDA(sf, device_id));
 Ort::Session session(env, model_path, sf);
 ```
